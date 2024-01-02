@@ -1,27 +1,61 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
+import GitHub from "../icons/GitHub.astro";
+import SocialPill from "../components/SocialPill.astro";
+import LinkendIn from "../icons/LinkendIn.astro";
+import Mail from "../icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../icons/Briefcase.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Portafolio de John Cotamo">
   <main>
-    <section class="w-full lg:w-[740px] mx-auto py-44">
+    <SectionContainer class="py-44 pb-24">
       <h1 class="text-white text-5xl font-bold flrx flex-row gap-x-4 pb-10">
         Hey,soy John <a
           href="https://www.google.com"
           target="_blank"
-		  rel="noopener"
-          class="flex justify-center"
+          rel="noopener"
+          class="flex justify-center items-center"
         >
           <Badge>Disponible para Trabajar</Badge>
         </a>
       </h1>
-      <h2 class="text-xl opacity-80">
-        +1 años de experiencia. Desarrollador Front. De Colombia, Bogota .
-        Especializado en crear Web.
+      <h2 class="text-2xl opacity-80 text-wrap">
+        <span> +1 años de experiencia.</span>
+        <span class="text-yellow-100/90"
+          >Desarrollador Front. De Colombia, Bogota . Especializado en crear
+          Web.
+        </span>
       </h2>
+      <nav class="flex gap-x-4 mt-8">
+        <SocialPill href="https://github.com/cotamo1901">
+          <GitHub class="size-6" />
+           GitHub
+        </SocialPill>
 
-      <ul></ul>
-    </section>
+        <SocialPill
+          href="https://www.linkedin.com/in/john-alexander-cotamo-molina-463005144/"
+        >
+          <LinkendIn class="size-6" />
+           LinkendIn
+        </SocialPill>
+
+        <SocialPill
+          href="https://www.linkedin.com/in/john-alexander-cotamo-molina-463005144/"
+        >
+          <Mail class="size-6" />
+           johncotamo@hotmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+    <SectionContainer id="experiencia">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-8" />Experiencia Laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
   </main>
 </Layout>

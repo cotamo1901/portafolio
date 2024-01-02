@@ -8,12 +8,16 @@ import Mail from "../icons/Mail.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Briefcase from "../icons/Briefcase.astro";
+import CodeIcon from "../icons/CodeIcon.astro"
+
 ---
 
 <Layout title="Portafolio de John Cotamo">
-  <main>
+  <main class="px-4">
     <SectionContainer class="py-44 pb-24">
-      <h1 class="text-white text-5xl font-bold flrx flex-row gap-x-4 pb-10">
+      <h1
+        class="text-white md:text-4xl text-3xl lg:text-5xl font-bold flrx flex-row gap-x-4 pb-6 lg:pb-10"
+      >
         Hey,soy John <a
           href="https://www.google.com"
           target="_blank"
@@ -23,30 +27,30 @@ import Briefcase from "../icons/Briefcase.astro";
           <Badge>Disponible para Trabajar</Badge>
         </a>
       </h1>
-      <h2 class="text-2xl opacity-80 text-wrap">
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
         <span> +1 años de experiencia.</span>
         <span class="text-yellow-100/90"
           >Desarrollador Front. De Colombia, Bogota . Especializado en crear
           Web.
         </span>
       </h2>
-      <nav class="flex gap-x-4 mt-8">
+      <nav class="flex gap-x-4 mt-8 flex-wrap">
         <SocialPill href="https://github.com/cotamo1901">
-          <GitHub class="size-6" />
+          <GitHub class="size-4 lg:size-6" />
            GitHub
         </SocialPill>
 
         <SocialPill
           href="https://www.linkedin.com/in/john-alexander-cotamo-molina-463005144/"
         >
-          <LinkendIn class="size-6" />
+          <LinkendIn class="size-4 lg:size-6" />
            LinkendIn
         </SocialPill>
 
         <SocialPill
           href="https://www.linkedin.com/in/john-alexander-cotamo-molina-463005144/"
         >
-          <Mail class="size-6" />
+          <Mail class="size-4 lg:size-6" />
            johncotamo@hotmail.com
         </SocialPill>
       </nav>
@@ -56,6 +60,14 @@ import Briefcase from "../icons/Briefcase.astro";
         <Briefcase class="size-8" />Experiencia Laboral
       </h2>
       <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-8" />Proyectos
+      </h2>
+      <Experience />
+      <Projects/>
     </SectionContainer>
   </main>
 </Layout>
